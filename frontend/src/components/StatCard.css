@@ -1,0 +1,152 @@
+/* StatCard.css */
+:root{
+  --blue-1:#0f2e5c;
+  --blue-2:#173f79;
+  --red-1:#c30f1c;
+  --red-2:#e4373f;
+  --panel:#eaf1ff;
+}
+
+.card{
+  width:100%;
+  border: 0;
+  cursor:pointer;
+  text-align:left;
+  border-radius: 16px;
+  overflow:hidden;
+
+  background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(234,241,255,0.92));
+  box-shadow: 0 18px 40px rgba(0,0,0,0.14);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 22px 52px rgba(0,0,0,0.18);
+}
+
+.cardTop{
+  padding: 14px 16px;
+  background: linear-gradient(90deg, var(--red-1), var(--red-2));
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.cardTitle{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  font-weight: 900;
+}
+
+.cardIcon{
+  opacity: 0.9;
+}
+
+.pill{
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.22);
+  font-weight: 800;
+}
+
+.pill.danger{
+  background: rgba(255,255,255,0.22);
+}
+
+.cardBody{
+  padding: 14px 16px 16px;
+  display:flex;
+  gap: 14px;
+  align-items:center;
+}
+
+.cardMain .bigNum{
+  font-size: 34px;
+  font-weight: 950;
+  color: #0f2e5c;
+}
+
+.sub{
+  margin-top: 6px;
+  font-weight: 800;
+  color: rgba(15,46,92,0.85);
+}
+
+.trend{
+  margin-top: 10px;
+  font-weight: 900;
+  font-size: 13px;
+}
+
+.trend.up{ color:#0f9d58; }
+.trend.down{ color:#d93025; }
+.trend.warn{ color:#b97c00; }
+.trend.neutral{ color:#54657f; }
+
+.chips{
+  margin-top: 10px;
+  display:flex;
+  gap: 8px;
+  flex-wrap:wrap;
+}
+
+.chip{
+  font-size: 12px;
+  font-weight: 900;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(15,46,92,0.08);
+  border: 1px solid rgba(15,46,92,0.12);
+  color:#0f2e5c;
+}
+
+.cardCTA{
+  margin-left:auto;
+  display:flex;
+  align-items:center;
+}
+
+.ctaBtn{
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 950;
+  color:#fff;
+  background: linear-gradient(180deg, var(--blue-2), var(--blue-1));
+  box-shadow: 0 10px 22px rgba(0,0,0,0.16);
+}
+
+/* simple art */
+.artBox{
+  width: 74px;
+  height: 74px;
+  border-radius: 16px;
+  background: rgba(15,46,92,0.08);
+  border: 1px solid rgba(15,46,92,0.10);
+  position:relative;
+  overflow:hidden;
+}
+.artShape{
+  position:absolute;
+  inset: 10px;
+  border-radius: 14px;
+  background: rgba(195,15,28,0.16);
+  transform: rotate(12deg);
+}
+.artCoin{
+  position:absolute;
+  right: 10px;
+  bottom: 10px;
+  font-weight: 1000;
+  color: rgba(15,46,92,0.85);
+}
+.artCoin.small{
+  right: 26px;
+  bottom: 28px;
+  opacity: 0.75;
+  transform: scale(0.85);
+}

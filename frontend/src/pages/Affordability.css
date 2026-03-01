@@ -1,0 +1,607 @@
+/* Affordability.css */
+
+.srAff_page {
+  min-height: 100vh;
+  background: #f3c8d2;
+  color: #0b1220;
+  padding: 18px 0 36px;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji";
+}
+
+.srAff_container {
+  width: min(1180px, calc(100% - 28px));
+  margin: 0 auto;
+}
+
+/* ───────────────── App Bar ───────────────── */
+.srAff_appBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(12, 20, 35, 0.12);
+  box-shadow: 0 10px 22px rgba(11, 18, 32, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.srAff_leftZone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.srAff_backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(11, 27, 58, 0.18);
+  background: rgba(255, 255, 255, 0.85);
+  color: #0b1b3a;
+  cursor: pointer;
+  font-weight: 800;
+}
+.srAff_backBtn:hover {
+  transform: translateY(-1px);
+}
+.srAff_backText {
+  font-size: 13px;
+}
+
+.srAff_logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(11, 27, 58, 0.12);
+  background: rgba(255, 255, 255, 0.75);
+}
+.srAff_logoMark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  color: #0b1b3a;
+  background: rgba(11, 27, 58, 0.08);
+}
+.srAff_logoText {
+  line-height: 1.05;
+}
+.srAff_logoTop {
+  font-weight: 900;
+  font-size: 13px;
+}
+.srAff_logoSub {
+  font-weight: 700;
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.srAff_appBarRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.srAff_iconBtn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(11, 27, 58, 0.12);
+  background: rgba(255, 255, 255, 0.85);
+  color: #0b1b3a;
+  cursor: pointer;
+}
+.srAff_iconBtn:hover {
+  transform: translateY(-1px);
+}
+.srAff_dot {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 99px;
+  background: #c8102e;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.9);
+}
+
+/* ───────────────── Title ───────────────── */
+.srAff_topTitle {
+  margin-top: 14px;
+  padding: 10px 6px 0;
+}
+.srAff_pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(11, 27, 58, 0.12);
+  border: 1px solid rgba(11, 27, 58, 0.12);
+  color: #0b1b3a;
+  font-weight: 900;
+  font-size: 12px;
+}
+.srAff_h1 {
+  margin: 10px 0 0;
+  font-size: 28px;
+  letter-spacing: -0.4px;
+  font-weight: 950;
+}
+.srAff_muted {
+  opacity: 0.75;
+  font-size: 13px;
+  margin: 6px 0 0;
+}
+
+/* ───────────────── Filters Card ───────────────── */
+.srAff_filtersCard {
+  margin-top: 12px;
+  padding: 14px 14px 12px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(12, 20, 35, 0.12);
+  box-shadow: 0 10px 22px rgba(11, 18, 32, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+/* ✅ small spacing tweak when filters are placed after header */
+.srAff_filtersCard_afterTitle {
+  margin-top: 10px;
+}
+
+.srAff_filtersHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.srAff_filtersTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 950;
+}
+.srAff_filtersIcon {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(11, 27, 58, 0.08);
+  color: #0b1b3a;
+}
+
+.srAff_resetLink {
+  border: none;
+  background: transparent;
+  color: #0b1b3a;
+  font-weight: 900;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.srAff_resetLink:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.srAff_filtersRow {
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr 0.7fr;
+  gap: 12px;
+}
+
+.srAff_inputGroup,
+.srAff_selectGroup {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 46px;
+  border-radius: 14px;
+  border: 1px solid rgba(11, 18, 32, 0.14);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0 12px;
+}
+
+.srAff_selectGroup_date {
+  padding-left: 44px;
+}
+
+.srAff_inputIcon {
+  position: absolute;
+  left: 12px;
+  color: rgba(11, 27, 58, 0.75);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.srAff_input {
+  width: 100%;
+  height: 44px;
+  border: none;
+  outline: none;
+  padding-left: 32px;
+  background: transparent;
+  font-weight: 700;
+  color: #0b1220;
+}
+
+.srAff_select {
+  width: 100%;
+  height: 44px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-weight: 800;
+  color: #0b1220;
+  cursor: pointer;
+}
+.srAff_selectSmall {
+  height: 38px;
+}
+
+/* ───────────────── KPI row ───────────────── */
+.srAff_kpiRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.srAff_kpiCard {
+  border-radius: 16px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(12, 20, 35, 0.12);
+  box-shadow: 0 10px 22px rgba(11, 18, 32, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.srAff_kpiTitle {
+  font-weight: 900;
+  font-size: 12px;
+  opacity: 0.75;
+}
+.srAff_kpiValue {
+  margin-top: 8px;
+  font-size: 22px;
+  font-weight: 950;
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+}
+.srAff_kpiDelta {
+  font-size: 12px;
+  font-weight: 950;
+  color: #0b1b3a;
+  opacity: 0.85;
+}
+.srAff_kpiSub {
+  margin-top: 6px;
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+/* ───────────────── Cards / Grid ───────────────── */
+.srAff_grid1 {
+  margin-top: 12px;
+}
+
+.srAff_card {
+  margin-top: 12px;
+  border-radius: 18px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(12, 20, 35, 0.12);
+  box-shadow: 0 10px 22px rgba(11, 18, 32, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.srAff_cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.srAff_cardHeaderRow {
+  align-items: center;
+}
+
+.srAff_cardTitle {
+  font-weight: 950;
+  font-size: 16px;
+  margin: 0;
+}
+
+.srAff_cardFilter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 14px;
+  border: 1px solid rgba(11, 18, 32, 0.14);
+  background: rgba(255, 255, 255, 0.85);
+}
+.srAff_cardFilterLabel {
+  font-size: 12px;
+  font-weight: 900;
+  opacity: 0.7;
+}
+
+.srAff_chartMuted {
+  margin-top: 4px;
+}
+
+.srAff_chartMock {
+  border-radius: 14px;
+  border: 1px solid rgba(11, 18, 32, 0.12);
+  background: rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+  padding: 8px;
+}
+
+/* Map */
+.srAff_mapWrap {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(11, 18, 32, 0.12);
+}
+
+/* ───────────────── Tooltip ───────────────── */
+.srAff_tip {
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(11, 18, 32, 0.16);
+  border-radius: 14px;
+  padding: 10px 12px;
+  box-shadow: 0 14px 28px rgba(11, 18, 32, 0.18);
+  max-width: 260px;
+}
+.srAff_tipTitle {
+  font-weight: 950;
+  margin-bottom: 6px;
+}
+.srAff_disputeText {
+  color: #c8102e;
+  font-weight: 950;
+}
+.srAff_okText {
+  color: #0a7a3b;
+  font-weight: 950;
+}
+
+/* ───────────────── Heatmap ───────────────── */
+.srAff_heatGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.srAff_heatCard {
+  border-radius: 16px;
+  padding: 12px;
+  border: 1px solid rgba(11, 18, 32, 0.14);
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 10px 22px rgba(11, 18, 32, 0.08);
+}
+
+.srAff_heatCard_affordable {
+  background: rgba(18, 183, 106, 0.14);
+  border-color: rgba(18, 183, 106, 0.22);
+}
+.srAff_heatCard_stressed {
+  background: rgba(247, 144, 9, 0.16);
+  border-color: rgba(247, 144, 9, 0.26);
+}
+.srAff_heatCard_critical {
+  background: rgba(217, 45, 32, 0.14);
+  border-color: rgba(217, 45, 32, 0.25);
+}
+
+.srAff_heatCard_dispute {
+  box-shadow: 0 0 0 2px rgba(200, 16, 46, 0.28), 0 10px 22px rgba(11, 18, 32, 0.08);
+}
+
+.srAff_heatCity {
+  font-weight: 950;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+.srAff_heatScore {
+  font-weight: 1000;
+  font-size: 20px;
+  letter-spacing: -0.2px;
+}
+.srAff_heatLabel {
+  font-size: 12px;
+  opacity: 0.75;
+  margin-top: 2px;
+}
+.srAff_heatStatusRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Status chips */
+.srAff_status {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 950;
+  border: 1px solid rgba(11, 18, 32, 0.14);
+  background: rgba(255, 255, 255, 0.85);
+}
+.srAff_status_affordable {
+  color: #0a7a3b;
+}
+.srAff_status_stressed {
+  color: #9a5b00;
+}
+.srAff_status_critical {
+  color: #b42318;
+}
+
+.srAff_disputeBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 950;
+  border: 1px solid rgba(11, 18, 32, 0.14);
+}
+.srAff_disputeBadge_good {
+  background: rgba(18, 183, 106, 0.14);
+  color: #0a7a3b;
+  border-color: rgba(18, 183, 106, 0.25);
+}
+.srAff_disputeBadge_bad {
+  background: rgba(200, 16, 46, 0.14);
+  color: #c8102e;
+  border-color: rgba(200, 16, 46, 0.25);
+}
+
+/* ───────────────── Table ───────────────── */
+.srAff_tableWrap {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(11, 18, 32, 0.12);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.srAff_table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.srAff_table thead th {
+  text-align: left;
+  padding: 12px 12px;
+  background: rgba(11, 27, 58, 0.07);
+  color: #0b1b3a;
+  font-weight: 950;
+  border-bottom: 1px solid rgba(11, 18, 32, 0.12);
+}
+
+.srAff_table tbody td {
+  padding: 12px 12px;
+  border-bottom: 1px solid rgba(11, 18, 32, 0.08);
+  vertical-align: middle;
+}
+
+.srAff_regionCell {
+  font-weight: 950;
+}
+
+.srAff_rowDispute td {
+  color: #0b1220;
+}
+.srAff_rowDispute td:first-child {
+  color: #c8102e;
+}
+
+/* ✅ ensure orange/red/green shading also visible in Detailed Region Analysis */
+.srAff_rowStatus_affordable {
+  background: rgba(18, 183, 106, 0.09);
+}
+.srAff_rowStatus_stressed {
+  background: rgba(247, 144, 9, 0.10);
+}
+.srAff_rowStatus_critical {
+  background: rgba(217, 45, 32, 0.09);
+}
+
+.srAff_emptyState {
+  padding: 12px;
+  font-weight: 900;
+  opacity: 0.75;
+}
+
+/* ───────────────── Footer ───────────────── */
+.srAff_footer {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 10px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(12, 20, 35, 0.12);
+}
+
+.srAff_footerRight {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.srAff_footerPill {
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 950;
+  font-size: 12px;
+  border: 1px solid rgba(11, 18, 32, 0.12);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+/* ───────────────── States ───────────────── */
+.srAff_stateBox {
+  margin-top: 16px;
+  border-radius: 16px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(12, 20, 35, 0.12);
+  font-weight: 900;
+}
+.srAff_stateBox_error {
+  border-color: rgba(217, 45, 32, 0.3);
+}
+
+.srAff_primaryBtn {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #0b1b3a;
+  color: white;
+  font-weight: 950;
+  cursor: pointer;
+}
+
+/* ───────────────── Responsive ───────────────── */
+@media (max-width: 980px) {
+  .srAff_kpiRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .srAff_heatGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .srAff_filtersRow {
+    grid-template-columns: 1fr;
+  }
+  .srAff_selectGroup_date {
+    padding-left: 44px;
+  }
+}

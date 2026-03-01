@@ -1,0 +1,1030 @@
+/* LegalCleanliness.css */
+
+/* ---------- Theme ---------- */
+:root {
+  --lc-bg: #f3c8d2; /* soft pink background like your UI */
+  --lc-card: #ffffff;
+  --lc-ink: #0f172a;
+  --lc-muted: #64748b;
+  --lc-border: rgba(15, 23, 42, 0.12);
+
+  --lc-green: #16a34a;
+  --lc-orange: #f59e0b;
+  --lc-red: #ef4444;
+  --lc-navy: #0b1b3a;
+
+  --lc-redbar: #ef4444;
+  --lc-amberbar: #f59e0b;
+  --lc-steelbar: #334155;
+
+  --lc-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+  --lc-radius: 18px;
+}
+
+.lcPage {
+  min-height: 100vh;
+  background: var(--lc-bg);
+  color: var(--lc-ink);
+}
+
+.lcTopBar {
+  height: 20px;
+}
+
+/* Center container */
+.lcWrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 18px 30px;
+}
+
+/* ---------- NEW TOP APP BAR (Return + Brand + icons) ---------- */
+.lcAppBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 14px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid var(--lc-border);
+  border-radius: var(--lc-radius);
+  box-shadow: var(--lc-shadow);
+  backdrop-filter: blur(10px);
+  margin-bottom: 14px;
+}
+
+.lcReturnBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--lc-border);
+  background: #fff;
+  color: var(--lc-ink);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.lcReturnBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.10);
+}
+
+.lcReturnBtn:active {
+  transform: translateY(0px);
+}
+
+.lcReturnIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.lcAppBrand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid var(--lc-border);
+  border-radius: 14px;
+  padding: 10px 12px;
+  min-width: 240px;
+}
+
+.lcAppBrandIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: rgba(11, 27, 58, 0.10);
+  color: var(--lc-navy);
+}
+
+.lcAppBrandIconSvg {
+  width: 18px;
+  height: 18px;
+}
+
+.lcAppBrandText {
+  line-height: 1.05;
+}
+
+.lcAppBrandName {
+  font-weight: 800;
+  color: var(--lc-ink);
+}
+
+.lcAppBrandSub {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--lc-muted);
+  margin-top: 2px;
+}
+
+.lcAppActions {
+  display: flex;
+  gap: 10px;
+}
+
+.lcIconBtn {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  border: 1px solid var(--lc-border);
+  background: #fff;
+  cursor: pointer;
+}
+
+.lcIconBtn:hover {
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.10);
+  transform: translateY(-1px);
+}
+
+.lcIconBtnSvg {
+  width: 18px;
+  height: 18px;
+  color: var(--lc-ink);
+}
+
+/* ---------- Header ---------- */
+.lcHeader {
+  padding: 18px 18px;
+  border-radius: var(--lc-radius);
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--lc-border);
+  box-shadow: var(--lc-shadow);
+  backdrop-filter: blur(10px);
+  margin-bottom: 14px;
+}
+
+.lcHeaderRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.lcBrand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lcLogoMark {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: rgba(11, 27, 58, 0.10);
+  display: grid;
+  place-items: center;
+  color: var(--lc-navy);
+}
+
+.lcLogoIcon {
+  width: 22px;
+  height: 22px;
+}
+
+.lcBrandName {
+  font-weight: 900;
+}
+
+.lcBrandTag {
+  font-size: 12px;
+  color: var(--lc-muted);
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.lcBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid var(--lc-border);
+  font-weight: 800;
+}
+
+.lcBadgeIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.lcTitle {
+  margin: 14px 0 6px;
+  font-size: 24px;
+  font-weight: 950;
+}
+
+.lcSubtitle {
+  margin: 0;
+  color: var(--lc-muted);
+  font-weight: 600;
+}
+
+/* ---------- Filters Bar ---------- */
+.lcFiltersBar {
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid var(--lc-border);
+  border-radius: var(--lc-radius);
+  box-shadow: var(--lc-shadow);
+  backdrop-filter: blur(10px);
+  padding: 14px;
+  margin-bottom: 14px;
+}
+
+.lcFiltersHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.lcFiltersHeaderIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.lcFiltersHeaderTitle {
+  font-weight: 900;
+}
+
+.lcFiltersControls {
+  display: grid;
+  grid-template-columns: 1fr 280px 280px;
+  gap: 12px;
+}
+
+.lcFiltersSearch {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--lc-border);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  gap: 10px;
+}
+
+.lcFiltersIcon {
+  width: 18px;
+  height: 18px;
+  color: var(--lc-muted);
+}
+
+.lcFiltersInput {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--lc-ink);
+}
+
+.lcFiltersSelect {
+  background: #fff;
+  border: 1px solid var(--lc-border);
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+}
+
+.lcFiltersSelect_date {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 12px;
+}
+
+.lcFiltersSelectEl {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 44px;
+  padding: 0 12px;
+  font-weight: 700;
+  background: transparent;
+}
+
+.lcFiltersDivider {
+  height: 1px;
+  background: var(--lc-border);
+  margin: 12px 0;
+}
+
+.lcFiltersReset {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--lc-border);
+  background: #fff;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.lcFiltersReset:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.lcFiltersResetIcon {
+  width: 16px;
+  height: 16px;
+}
+
+/* ---------- KPI ---------- */
+.lcKpiGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.lcKpiCard {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid var(--lc-border);
+  border-radius: var(--lc-radius);
+  box-shadow: var(--lc-shadow);
+  padding: 14px;
+  backdrop-filter: blur(10px);
+}
+
+.lcKpiTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lcKpiTopLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lcKpiIconWrap {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(11, 27, 58, 0.08);
+}
+
+.lcKpiIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.lcKpiLabel {
+  font-weight: 900;
+}
+
+.lcKpiValueRow {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.lcKpiValue {
+  font-size: 22px;
+  font-weight: 950;
+}
+
+.lcKpiDelta {
+  font-weight: 900;
+  color: var(--lc-green);
+}
+
+.lcKpiSub {
+  margin-top: 6px;
+  color: var(--lc-muted);
+  font-weight: 600;
+}
+
+/* ---------- Cards / Layout ---------- */
+.lcGrid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.lcCard {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid var(--lc-border);
+  border-radius: var(--lc-radius);
+  box-shadow: var(--lc-shadow);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.lcCardHeader {
+  padding: 14px 14px 8px;
+}
+
+.lcCardTitle {
+  margin: 0;
+  font-weight: 950;
+}
+
+.lcCardHint {
+  margin: 6px 0 0;
+  color: var(--lc-muted);
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.lcCardBody {
+  padding: 12px 14px 16px;
+}
+
+.lcChartBody {
+  position: relative;
+}
+
+/* ---------- Tooltip ---------- */
+.lcTip {
+  position: absolute;
+  transform: translate(-50%, -115%);
+  background: #0b1b3a;
+  color: #fff;
+  border-radius: 12px;
+  padding: 10px 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  min-width: 150px;
+  z-index: 10;
+}
+
+.lcTip_show {
+  opacity: 1;
+}
+
+.lcTipTitle {
+  font-weight: 900;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.lcTipValue {
+  font-weight: 950;
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+/* ---------- Donut ---------- */
+.lcDonut {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.lcDonutSvgWrap {
+  display: grid;
+  place-items: center;
+}
+
+.lcDonutSvg {
+  max-width: 100%;
+}
+
+.lcDonutSeg {
+  cursor: pointer;
+}
+
+.lcDonutCenterTitle {
+  font-size: 14px;
+  font-weight: 900;
+  fill: var(--lc-ink);
+}
+
+.lcDonutCenterSub {
+  font-size: 12px;
+  font-weight: 700;
+  fill: var(--lc-muted);
+}
+
+.lcLegend {
+  display: grid;
+  gap: 8px;
+}
+
+.lcLegendItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lcLegendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+}
+
+.lcLegendText {
+  font-weight: 700;
+  color: var(--lc-ink);
+}
+
+/* ---------- Bar Chart ---------- */
+.lcBarSvg {
+  width: 100%;
+  height: 280px;
+}
+
+.lcBarGrid {
+  stroke: rgba(15, 23, 42, 0.10);
+}
+
+.lcBarTick {
+  fill: var(--lc-muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.lcBarLabel {
+  fill: var(--lc-ink);
+  font-size: 12px;
+  font-weight: 800;
+  white-space: pre-line;
+}
+
+.lcBar {
+  opacity: 0.95;
+}
+
+/* ---------- Table ---------- */
+.lcTableCard .lcCardHeader_tools {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.lcTools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.lcSearch,
+.lcSelect {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--lc-border);
+  background: #fff;
+}
+
+.lcToolIcon {
+  width: 16px;
+  height: 16px;
+  color: var(--lc-muted);
+}
+
+.lcSearchInput {
+  border: none;
+  outline: none;
+  font-weight: 700;
+  min-width: 240px;
+}
+
+.lcSelectEl {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-weight: 800;
+  height: 20px;
+}
+
+.lcBtn {
+  border: 1px solid var(--lc-border);
+  background: #fff;
+  border-radius: 14px;
+  padding: 10px 12px;
+  font-weight: 900;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lcBtn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.lcBtnBadge {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: rgba(11, 27, 58, 0.10);
+  font-weight: 900;
+}
+
+.lcTableWrap {
+  overflow: auto;
+  border-top: 1px solid var(--lc-border);
+}
+
+.lcTable {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 980px;
+}
+
+.lcTable thead th {
+  text-align: left;
+  padding: 12px 14px;
+  font-size: 12px;
+  color: var(--lc-muted);
+  font-weight: 900;
+  background: rgba(255, 255, 255, 0.75);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  border-bottom: 1px solid var(--lc-border);
+}
+
+.lcTable tbody td {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  vertical-align: middle;
+  font-weight: 650;
+}
+
+.lcRowDisputed td {
+  background: rgba(239, 68, 68, 0.08);
+}
+
+.lcMono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.lcCenter {
+  text-align: center;
+}
+
+.lcAddrLine1 {
+  font-weight: 900;
+}
+
+.lcAddrLine2 {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--lc-muted);
+  margin-top: 2px;
+}
+
+/* Status pills */
+.lcPill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: #fff;
+}
+
+.lcPill_verified {
+  color: var(--lc-green);
+}
+
+.lcPill_pending {
+  color: var(--lc-orange);
+}
+
+.lcPill_disputed {
+  color: var(--lc-red);
+}
+
+.lcPill_litigation {
+  color: var(--lc-navy);
+}
+
+.lcPill_mort_clear {
+  color: var(--lc-green);
+}
+
+.lcPill_mort_active {
+  color: var(--lc-orange);
+}
+
+.lcPill_mort_defaulted {
+  color: var(--lc-red);
+}
+
+.lcCellIcon {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 10px;
+  font-weight: 950;
+}
+
+.lcCellIcon_ok {
+  background: rgba(22, 163, 74, 0.12);
+  color: var(--lc-green);
+}
+
+.lcCellIcon_warn {
+  background: rgba(245, 158, 11, 0.14);
+  color: var(--lc-orange);
+}
+
+.lcCellIcon_bad {
+  background: rgba(239, 68, 68, 0.14);
+  color: var(--lc-red);
+}
+
+.lcHashRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lcHashIcon {
+  width: 16px;
+  height: 16px;
+  color: var(--lc-muted);
+}
+
+/* Flags */
+.lcFlags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.lcFlag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: #fff;
+}
+
+.lcFlag_bad {
+  color: var(--lc-red);
+}
+
+.lcFlag_more {
+  color: var(--lc-navy);
+  background: rgba(11, 27, 58, 0.08);
+}
+
+.lcPlusIcon {
+  width: 14px;
+  height: 14px;
+}
+
+/* Empty state */
+.lcEmpty {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.lcEmptyTitle {
+  font-weight: 950;
+}
+
+.lcEmptySub {
+  color: var(--lc-muted);
+  font-weight: 650;
+  margin-top: 4px;
+}
+
+/* ---------- Pagination ---------- */
+.lcPager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 14px;
+  border-top: 1px solid var(--lc-border);
+  background: rgba(255, 255, 255, 0.70);
+}
+
+.lcPagerInfo {
+  color: var(--lc-muted);
+  font-weight: 700;
+}
+
+.lcPagerBtns {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lcPagerBtn {
+  border: 1px solid var(--lc-border);
+  background: #fff;
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.lcPagerBtn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.lcPagerNum {
+  width: 38px;
+  height: 36px;
+  border-radius: 12px;
+  border: 1px solid var(--lc-border);
+  background: #fff;
+  font-weight: 950;
+  cursor: pointer;
+}
+
+.lcPagerNum_active {
+  background: rgba(11, 27, 58, 0.10);
+  color: var(--lc-navy);
+  border-color: rgba(11, 27, 58, 0.22);
+}
+
+.lcPagerDots {
+  color: var(--lc-muted);
+  font-weight: 900;
+  padding: 0 6px;
+}
+
+/* ---------- Audit Cards ---------- */
+.lcAuditGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding: 14px;
+}
+
+.lcAuditCard {
+  background: #fff;
+  border: 1px solid var(--lc-border);
+  border-radius: var(--lc-radius);
+  padding: 14px;
+}
+
+.lcAuditLabel {
+  color: var(--lc-muted);
+  font-weight: 800;
+}
+
+.lcAuditValue {
+  font-size: 22px;
+  font-weight: 950;
+  margin-top: 8px;
+}
+
+.lcAuditHint {
+  color: var(--lc-muted);
+  font-weight: 650;
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.lcProgress {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.08);
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+.lcProgressFill {
+  height: 100%;
+  background: rgba(11, 27, 58, 0.55);
+  border-radius: 999px;
+}
+
+.lcAuditCard_bad {
+  border-color: rgba(239, 68, 68, 0.35);
+  background: rgba(239, 68, 68, 0.06);
+}
+
+.lcAuditLabel_bad,
+.lcAuditValue_bad {
+  color: var(--lc-red);
+}
+
+/* ---------- Footer ---------- */
+.lcFooterSpace {
+  height: 12px;
+}
+
+.lcFooter {
+  margin-top: 12px;
+  padding: 0 2px;
+}
+
+.lcFooterInner {
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid var(--lc-border);
+  border-radius: var(--lc-radius);
+  padding: 12px 14px;
+  box-shadow: var(--lc-shadow);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.lcFooterLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lcFooterDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(11, 27, 58, 0.35);
+}
+
+.lcFooterText {
+  color: var(--lc-muted);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.lcFooterRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lcFooterPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--lc-border);
+  background: #fff;
+  font-weight: 900;
+  font-size: 12px;
+}
+
+.lcFooterIcon {
+  width: 14px;
+  height: 14px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .lcFiltersControls {
+    grid-template-columns: 1fr;
+  }
+  .lcKpiGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .lcGrid2 {
+    grid-template-columns: 1fr;
+  }
+  .lcAuditGrid {
+    grid-template-columns: 1fr;
+  }
+  .lcAppBrand {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .lcWrap {
+    padding: 12px;
+  }
+  .lcKpiGrid {
+    grid-template-columns: 1fr;
+  }
+  .lcAppBar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,173 @@
+/* Navbar.css */
+:root{
+  --sb-blue-1:#0f2e5c;
+  --sb-blue-2:#173f79;
+  --sb-blue-3:#0a2346;
+
+  --sb-red-1:#c30f1c;
+  --sb-red-2:#e4373f;
+
+  --txt:#ffffff;
+}
+
+.nav{
+  position: fixed;
+  top: 78px;              /* header height */
+  left: 0;
+  bottom: 0;
+  width: 250px;
+
+  z-index: 999;           /* ✅ ensure nothing blocks clicks */
+  pointer-events: auto;
+
+  background: linear-gradient(180deg, var(--sb-blue-1), var(--sb-blue-2) 50%, var(--sb-blue-3));
+  box-shadow: 18px 0 40px rgba(0,0,0,0.18);
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+  overflow: hidden;
+}
+
+.navInner{
+  height: 100%;
+  padding: 16px 14px 18px; /* ✅ extra bottom padding */
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+}
+
+.navBrandCard{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+
+  width: 100%;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.10);
+  border-radius: 14px;
+  padding: 12px;
+
+  cursor:pointer;
+  color: var(--txt);
+  text-align:left;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.16);
+  transition: transform .12s ease, background .12s ease;
+
+  text-decoration: none; /* ✅ NavLink */
+}
+
+.navBrandCard:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.14);
+}
+
+.navCrest{
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background: linear-gradient(180deg, var(--sb-red-2), var(--sb-red-1));
+  box-shadow: 0 10px 22px rgba(0,0,0,0.22);
+}
+
+.navBrandTxt{
+  display:flex;
+  flex-direction:column;
+  line-height: 1.05;
+}
+
+.navBrandTop{
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.navBrandBottom{
+  font-weight: 700;
+  font-size: 14px;
+  opacity: 0.92;
+}
+
+.navItem{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 12px;
+
+  color: rgba(255,255,255,0.92);
+  text-decoration:none;
+  font-weight: 800;
+
+  border: 1px solid transparent;
+  transition: transform .12s ease, background .12s ease, border-color .12s ease;
+}
+
+.navItem:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.10);
+  border-color: rgba(255,255,255,0.16);
+}
+
+.navItem.active{
+  background: linear-gradient(180deg, var(--sb-red-2), var(--sb-red-1));
+  border-color: rgba(255,255,255,0.18);
+  color: #fff;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.22);
+}
+
+.navIcon{
+  width: 22px;
+  display:inline-flex;
+  justify-content:center;
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.25));
+}
+
+/* ✅ Bottom menu */
+.navBottom{
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  display:flex;
+  flex-direction:column;
+  gap: 8px;
+}
+
+.navMini{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+
+  width:100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.92);
+
+  font-weight: 900;
+  cursor:pointer;
+  text-align:left;
+
+  transition: transform .12s ease, background .12s ease, border-color .12s ease;
+  text-decoration: none; /* ✅ NavLink */
+}
+
+.navMini:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.12);
+}
+
+.navMini.active{
+  background: rgba(255,255,255,0.16);
+  border-color: rgba(255,255,255,0.22);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.12);
+}
+
+.navMini span{
+  font-weight: 900;
+}
